@@ -17,6 +17,7 @@ before_action :require_authorized_for_current_section
     if current_section.course.user != current_user
       return render text: 'Unauthorized', status: :unauthorized
     end
+  end
 
   helper_method :current_section
   def current_section
